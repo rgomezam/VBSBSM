@@ -1,0 +1,54 @@
+# BEGIN PLOT
+Legend=1
+LogY=1
+DrawOnly=//home/rgomez/Documents/vbssmeft/local_bicocca/WZ_diboson/rivet/SM_WZ_dib.yoda/WZ_ATLAS/d22-x01-y01 //home/rgomez/Documents/vbssmeft/local_bicocca/WZ_diboson/rivet/cW_WZ_dib_linear.yoda/WZ_ATLAS/d22-x01-y01 //home/rgomez/Documents/vbssmeft/local_bicocca/WZ_diboson/rivet/cW_WZ_dib_quad.yoda/WZ_ATLAS/d22-x01-y01
+LegendOnly=//home/rgomez/Documents/vbssmeft/local_bicocca/WZ_diboson/rivet/SM_WZ_dib.yoda/WZ_ATLAS/d22-x01-y01 //home/rgomez/Documents/vbssmeft/local_bicocca/WZ_diboson/rivet/cW_WZ_dib_linear.yoda/WZ_ATLAS/d22-x01-y01 //home/rgomez/Documents/vbssmeft/local_bicocca/WZ_diboson/rivet/cW_WZ_dib_quad.yoda/WZ_ATLAS/d22-x01-y01
+RatioPlot=1
+RatioPlotReference=//home/rgomez/Documents/vbssmeft/local_bicocca/WZ_diboson/rivet/SM_WZ_dib.yoda/WZ_ATLAS/d22-x01-y01
+RatioPlotYLabel=Ratio
+# END PLOT
+
+# BEGIN HISTO1D //home/rgomez/Documents/vbssmeft/local_bicocca/WZ_diboson/rivet/SM_WZ_dib.yoda/WZ_ATLAS/d22-x01-y01
+LineColor=red
+LineStyle=solid
+Path=//home/rgomez/Documents/vbssmeft/local_bicocca/WZ_diboson/rivet/SM_WZ_dib.yoda/WZ_ATLAS/d22-x01-y01
+ScaledBy=5.55489232903509773e+01
+Title=SM_WZ_dib
+# xlow	 xhigh	 val	 errminus	 errplus
+0.000000e+00	1.800000e+02	2.455051e-03	2.325523e-05	2.325523e-05
+1.800000e+02	3.000000e+02	1.495816e-03	2.223172e-05	2.223172e-05
+3.000000e+02	5.000000e+02	5.759190e-04	1.068535e-05	1.068535e-05
+5.000000e+02	8.000000e+02	1.667871e-04	4.694972e-06	4.694972e-06
+8.000000e+02	1.000000e+03	6.047330e-05	3.462693e-06	3.462693e-06
+# END HISTO1D
+
+
+# BEGIN HISTO1D //home/rgomez/Documents/vbssmeft/local_bicocca/WZ_diboson/rivet/cW_WZ_dib_linear.yoda/WZ_ATLAS/d22-x01-y01
+LineColor=blue
+LineStyle=solid
+Path=//home/rgomez/Documents/vbssmeft/local_bicocca/WZ_diboson/rivet/cW_WZ_dib_linear.yoda/WZ_ATLAS/d22-x01-y01
+ScaledBy=1.77550761430487171e+02
+Title=cW_WZ_dib_linear
+# xlow	 xhigh	 val	 errminus	 errplus
+0.000000e+00	1.800000e+02	2.357888e-03	1.054893e-04	1.054893e-04
+1.800000e+02	3.000000e+02	1.429028e-03	1.042044e-04	1.042044e-04
+3.000000e+02	5.000000e+02	6.323445e-04	5.610274e-05	5.610274e-05
+5.000000e+02	8.000000e+02	1.528535e-04	2.875210e-05	2.875210e-05
+8.000000e+02	1.000000e+03	6.978870e-05	2.277807e-05	2.277807e-05
+# END HISTO1D
+
+
+# BEGIN HISTO1D //home/rgomez/Documents/vbssmeft/local_bicocca/WZ_diboson/rivet/cW_WZ_dib_quad.yoda/WZ_ATLAS/d22-x01-y01
+LineColor=green
+LineStyle=solid
+Path=//home/rgomez/Documents/vbssmeft/local_bicocca/WZ_diboson/rivet/cW_WZ_dib_quad.yoda/WZ_ATLAS/d22-x01-y01
+ScaledBy=1.66944974279112785e+02
+Title=cW_WZ_dib_quad
+# xlow	 xhigh	 val	 errminus	 errplus
+0.000000e+00	1.800000e+02	1.324628e-01	1.352350e-03	1.352350e-03
+1.800000e+02	3.000000e+02	1.055310e-01	1.479015e-03	1.479015e-03
+3.000000e+02	5.000000e+02	7.029575e-02	9.349402e-04	9.349402e-04
+5.000000e+02	8.000000e+02	3.448567e-02	5.342875e-04	5.342875e-04
+8.000000e+02	1.000000e+03	1.468188e-02	4.268613e-04	4.268613e-04
+# END HISTO1D
+

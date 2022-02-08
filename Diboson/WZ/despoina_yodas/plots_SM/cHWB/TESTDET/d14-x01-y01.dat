@@ -1,0 +1,41 @@
+# BEGIN PLOT
+LegendOnly=//eos/home-d/desampso/ATLAS_WZ/yoda_v2/sm.yoda/TESTDET/d14-x01-y01 //eos/home-d/desampso/ATLAS_WZ/yoda_v2/cHWB.yoda/TESTDET/d14-x01-y01
+DrawOnly=//eos/home-d/desampso/ATLAS_WZ/yoda_v2/sm.yoda/TESTDET/d14-x01-y01 //eos/home-d/desampso/ATLAS_WZ/yoda_v2/cHWB.yoda/TESTDET/d14-x01-y01
+RatioPlotReference=//eos/home-d/desampso/ATLAS_WZ/yoda_v2/sm.yoda/TESTDET/d14-x01-y01
+RatioPlot=1
+LogY=1
+RatioPlotYLabel=Ratio
+Legend=1
+# END PLOT
+
+# BEGIN HISTO1D //eos/home-d/desampso/ATLAS_WZ/yoda_v2/sm.yoda/TESTDET/d14-x01-y01
+LineColor=red
+LineStyle=solid
+Path=//eos/home-d/desampso/ATLAS_WZ/yoda_v2/sm.yoda/TESTDET/d14-x01-y01
+ScaledBy=2.50036986285482712e+01
+Title=sm
+# xlow	 xhigh	 val	 errminus	 errplus
+0.000000e+00	6.000000e-01	2.763033e-01	3.456224e-03	3.456224e-03
+6.000000e-01	1.200000e+00	3.610878e-01	3.950389e-03	3.950389e-03
+1.200000e+00	1.800000e+00	6.134120e-01	5.148912e-03	5.148912e-03
+1.800000e+00	2.300000e+00	1.299379e+00	8.209136e-03	8.209136e-03
+2.300000e+00	2.800000e+00	3.682850e+00	1.382043e-02	1.382043e-02
+2.800000e+00	3.200000e+00	1.297730e+01	2.900517e-02	2.900517e-02
+# END HISTO1D
+
+
+# BEGIN HISTO1D //eos/home-d/desampso/ATLAS_WZ/yoda_v2/cHWB.yoda/TESTDET/d14-x01-y01
+LineColor=blue
+LineStyle=solid
+Path=//eos/home-d/desampso/ATLAS_WZ/yoda_v2/cHWB.yoda/TESTDET/d14-x01-y01
+ScaledBy=6.25227382438249677e+01
+Title=cHWB
+# xlow	 xhigh	 val	 errminus	 errplus
+0.000000e+00	6.000000e-01	4.417550e-01	1.281075e-02	1.281075e-02
+6.000000e-01	1.200000e+00	5.930975e-01	1.467338e-02	1.467338e-02
+1.200000e+00	1.800000e+00	1.049138e+00	1.921656e-02	1.921656e-02
+1.800000e+00	2.300000e+00	2.281168e+00	3.088550e-02	3.088550e-02
+2.300000e+00	2.800000e+00	6.668444e+00	5.209870e-02	5.209870e-02
+2.800000e+00	3.200000e+00	2.460849e+01	1.102344e-01	1.102344e-01
+# END HISTO1D
+
