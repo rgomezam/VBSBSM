@@ -25,13 +25,14 @@ import os
 v = 0.246
 cwil=10.
 
-file_sm = yoda.read('SM_WZ_dib.yoda')
+file_sm = yoda.read('../despoina/SM_WZ_dib.yoda')
 hist_sm = file_sm[ '/WZ_ATLAS/d12-x01-y01']
 edges = hist_sm.xEdges()
 vals_lo = hist_sm.areas()
 #print("xEdges: ",  edges )
 print("vals lo", vals_lo, "XS (in fb)", np.sum(vals_lo))
 #
+quit()
 #
 file_sm2 = yoda.read('despoina_yodas/sm_despoina.yoda')
 hist_sm2 = file_sm2[ '/TESTDET/d12-x01-y01']
