@@ -203,6 +203,7 @@ def plot_lin():
 
     plt.setp(padTop.get_xticklabels(), visible=False)
     plt.setp(padBot.get_yticklabels(), family='serif')
+    
     plt.setp(padBot.get_xticklabels(), family='serif')
 
     padBot.tick_params(which='both',direction='in',labelsize=15,right=True)
