@@ -14,13 +14,13 @@ import math
 #  Despoina
 
 dirs = ['WZjj/' ] #, 'WZ/despoina/Inclusive/Inclusive_yodas_BSM1/', 'WZ/despoina/Inclusive/Inclusive_yodas_BSM2/']
-analysis = ['/TESTDET/'] #, '/TESTDET_BSM1/', '/TESTDET_BSM2/']
+analysis = ['/TESTDET/', 'BSM1', 'BSM2'] #, '/TESTDET_BSM1/', '/TESTDET_BSM2/']
 
 
 operators = ['sm','cW' ,'cHW','cHB', 'cHDD', 'cHWB', 'cHWtil', 'cHBtil', 'cHWBtil','cWtil']
-files = ['d12-x01-y01', 'd08-x01-y01','d10-x01-y01','d14-x01-y01', 'd16-x01-y01' ]
-distribs = ['MT_WZ', 'PT_Z', 'PT_W','Delta Phi WZ' , 'PT_nu'] 
-bsm1  = ['MT_WZ', 'PT_Z', 'PT_W','Delta Phi WZ' , 'PT_nu'] 
+files = ['d08-x01-y01','d12-x01-y01','d14-x01-y01' ]
+distribs = ['ptZ', 'mtWZ', 'DeltaPhiWZ'] 
+bsm1  = ['xxx'] 
 
 # From Rivet
 # book(_h_ptZ,8,1,1);  
@@ -50,17 +50,17 @@ def sensit(x,y): # x and y are arrays
 print('###########    Total XSEC:    ##########################' )
 print('\n ### we first print the SM as a check ### \n ')
 
-# now loop over operators:
+#  loop over operators:
 
 for op in operators:
     print('Operator: ' + op )
-    for dir,an in zip(dirs,analysis):
-        hist_sm = yoda.read(dir+'sm.yoda')[an + files[0]] #any histo is fine, we take 0 for example
+    for dir in dirs:
+        hist_sm = yoda.read(dir+'sm.yoda')[analysis[0] + files[0]] #any histo is fine, we take 0 for example
         vals_sm = hist_sm.areas()
         filename = yoda.read(dir +  op  + '.yoda')
-        hist = filename[ an + files[0]] #any histo is fine, we take 0 for example
+        hist = filename[ analysis[0] + files[0]] #any histo is fine, we take 0 for example
         vals_lo = (hist.areas())
-        print( an + " Total XS (in fb)", np.sum(vals_lo).round(decimals=3) , ' ratio to SM: ', (np.sum(vals_lo)/np.sum(vals_sm)).round(decimals=3) )
+        print( analysis[0] + " Total XS (in fb)", np.sum(vals_lo).round(decimals=3) , ' ratio to SM: ', (np.sum(vals_lo)/np.sum(vals_sm)).round(decimals=3) )
     print('\n \n')
 
 #loop over distributions
@@ -70,14 +70,18 @@ for i in range(len(files)):
     
     for op in operators:
         print('Operator: ' + op )
-        for dir,an in zip(dirs,analysis):
-            hist_sm = yoda.read(dir+'sm.yoda')[an + files[i] ] 
+        for dir in dirs:
+            hist_sm = yoda.read(dir+'sm.yoda')[analysis[0] + files[i] ] 
             vals_sm = hist_sm.areas()
             filename = yoda.read(dir +  op  + '.yoda')
-            hist = filename[ an + files[i]] 
+            hist = filename[ analysis[0] + files[i]] 
             vals_lo = hist.areas()
-            print(an + "vals linear EFT", vals_lo.round(decimals=3))
-            print(an + "Sensitivities", sensit(vals_lo,vals_sm) )
+            print(analysis[0] + "vals linear EFT", vals_lo.round(decimals=3))
+            print(analysis[0] + "Sensitivities", sensit(vals_lo,vals_sm) ,'\n')
+            hist_bsm1 = filename[ analysis[0] + files[i]] 
+            vals_bsm1 = hist.areas()
+            print(analysis[0] + "vals BSM1", vals_lo.round(decimals=3))
+            print(analysis[0] + "Sensitivities BSM1", sensit(vals_lo,vals_sm) , '\n')           
         print( '\n \n')
 
 
