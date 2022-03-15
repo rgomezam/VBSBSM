@@ -13,13 +13,20 @@ import math
 # 
 #  Despoina
 
-dirs = ['WZ/despoina/Inclusive/SM/', 'WZ/despoina/Inclusive/Inclusive_yodas_BSM1/', 'WZ/despoina/Inclusive/Inclusive_yodas_BSM2/']
-analysis = ['/TESTDET/', '/TESTDET_BSM1/', '/TESTDET_BSM2/']
+dirs = ['WZjj/' ] #, 'WZ/despoina/Inclusive/Inclusive_yodas_BSM1/', 'WZ/despoina/Inclusive/Inclusive_yodas_BSM2/']
+analysis = ['/TESTDET/'] #, '/TESTDET_BSM1/', '/TESTDET_BSM2/']
 
 
 operators = ['sm','cW' ,'cHW','cHB', 'cHDD', 'cHWB', 'cHWtil', 'cHBtil', 'cHWBtil','cWtil']
 files = ['d12-x01-y01', 'd08-x01-y01','d10-x01-y01','d14-x01-y01', 'd16-x01-y01' ]
 distribs = ['MT_WZ', 'PT_Z', 'PT_W','Delta Phi WZ' , 'PT_nu'] 
+bsm1  = ['MT_WZ', 'PT_Z', 'PT_W','Delta Phi WZ' , 'PT_nu'] 
+
+# From Rivet
+# book(_h_ptZ,8,1,1);  
+# book(_h_mtWZ,12,1,1); 
+# book(_h_DeltaPhiWZ,14,1,1);
+
 # the distribs array is hard coded, comparing the hepdata entried with the
 # labeling in the yoda files (See  )
 
@@ -27,7 +34,7 @@ distribs = ['MT_WZ', 'PT_Z', 'PT_W','Delta Phi WZ' , 'PT_nu']
 # missing distribs 'd05-x01-y01' -> 'fid_XS_ratio'
 
 
-#define sensitivity, to circumbvent many 0/0 results
+#define sensitivity, to circumvent many 0/0 results
 def sensit(x,y): # x and y are arrays
     sensit_array = np.empty(len(x))
     for i in range(len(x)):        
