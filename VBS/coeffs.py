@@ -20,6 +20,7 @@ analysis = ['/TESTDET/', 'BSM1', 'BSM2'] #, '/TESTDET_BSM1/', '/TESTDET_BSM2/']
 operators = ['sm','cW' ,'cHW','cHB', 'cHDD', 'cHWB', 'cHWtil', 'cHBtil', 'cHWBtil','cWtil']
 files = ['d08-x01-y01','d12-x01-y01','d14-x01-y01' ]
 distribs = ['ptZ', 'mtWZ', 'DeltaPhiWZ'] 
+distribs_BSM = ['1_h_ptZ_', '1_h_mtWZ_', '1_h_DeltaPhiWZ_'] 
 bsm1  = ['xxx'] 
 
 # From Rivet
@@ -78,10 +79,10 @@ for i in range(len(files)):
             vals_lo = hist.areas()
             print(analysis[0] + "vals linear EFT", vals_lo.round(decimals=3))
             print(analysis[0] + "Sensitivities", sensit(vals_lo,vals_sm) ,'\n')
-            hist_bsm1 = filename[ analysis[0] + files[i]] 
-            vals_bsm1 = hist.areas()
-            print(analysis[0] + "vals BSM1", vals_lo.round(decimals=3))
-            print(analysis[0] + "Sensitivities BSM1", sensit(vals_lo,vals_sm) , '\n')           
+            hist_bsm1 = filename[ analysis[0] + distribs_BSM[i]+ 'BSM1'] 
+            vals_bsm1 = hist_bsm1.areas()
+            print(analysis[0] + "vals BSM1", vals_bsm1.round(decimals=3))
+            print(analysis[0] + "Sensitivities BSM1", sensit(vals_bsm1,vals_sm) , '\n')           
         print( '\n \n')
 
 

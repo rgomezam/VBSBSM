@@ -38,8 +38,23 @@ for i in range(len(ops)):
     best_fit(ops[i])
 
 
-print("Central values")
+print("\n #### Central values ####")
 for i in range(len(ops)):
     tmp = np.round((ops[i][0] + ops[i][1])/2,2)
     central_value = ops[i][2] + " = " + str(tmp) + " "
     print(central_value)
+
+
+
+print("\n #### Top of bands ####")
+for i in range(len(ops)):
+    top_band = ops[i][2] + " = " + str(np.round(ops[i][1],2)) + " "
+    print(top_band)
+
+
+print("\n #### Bottom of bands ####")
+for i in range(len(ops)):
+    bottom_band = ops[i][2] + " = " + str(np.round(ops[i][0],2)) + " "
+    print(bottom_band)
+
+        
